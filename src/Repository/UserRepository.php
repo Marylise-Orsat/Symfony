@@ -15,9 +15,24 @@ use Doctrine\Persistence\ManagerRegistry;
 class UserRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
-    {
+    { 
         parent::__construct($registry, User::class);
     }
+    
+    /**
+     * @return User[]
+     */
+    public function getUser($id)
+    {
+        return $this->getEntityManager()
+        ->createQuery(
+            'SELECT id, email, firstname, lastname, birth, phone, picture, payment, delivery
+            FROM User
+            WHERE id = ${id}')
+        ->getResult();
+    }
+
+    
 
     // /**
     //  * @return User[] Returns an array of User objects
