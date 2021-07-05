@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <link href="style.css" rel="stylesheet">
-            <link href="form.css" rel="stylesheet">
+            <link  href="{{ asset('css/style.css') }}" rel="stylesheet">
+           <link  href="{{ asset('css/form.css') }}" rel="stylesheet">
             <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
         {% endblock %}
     </head>

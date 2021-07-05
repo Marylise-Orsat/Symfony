@@ -25,15 +25,15 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     /**
      * @return User[]
      */
-    public function getUser($id)
-    {
-        return $this->getEntityManager()
-        ->createQuery(
-            'SELECT id, email, firstname, lastname, birth, phone, picture, payment, delivery
-            FROM User
-            WHERE id = ${id}')
-        ->getResult();
-    }
+    // public function getUser($id)
+    // {
+    //     return $this->getEntityManager()
+    //     ->createQuery(
+    //         'SELECT id, email, firstname, lastname, birth, phone, picture, payment, delivery
+    //         FROM User
+    //         WHERE id = ${id}')
+    //     ->getResult();
+    // }
 
     /**
      * Used to upgrade (rehash) the user's password automatically over time.
