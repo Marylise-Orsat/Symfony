@@ -2,7 +2,8 @@
 ***
 ## Contexte :
 
-Nous avons repris un projet interne sur une application e-commerce et nous l'avons transposé pour Symfony.
+Dans le cadre de notre formation en tant que développeur web et web mobile, nous avons repris un projet interne sur une application e-commerce et nous l'avons transposé pour Symfony.
+Ce projet en une découverte du framework Symfony.
 
 
 ## Application utilisant Symphony 5 :
